@@ -34,6 +34,19 @@ function Payment() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (window.Razorpay) return;
+
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
     const fetchProduct = async () => {
       if (!productId) return;
       setBuyNowLoading(true);
@@ -178,6 +191,11 @@ function Payment() {
           },
         },
       };
+
+      if (!window.Razorpay) {
+        toast.error("Payment service is loading. Please try again.");
+        return;
+      }
 
       const rzp = new window.Razorpay(options);
       rzp.open();
