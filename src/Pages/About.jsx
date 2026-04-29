@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ab from "../assets/ab.webp"
+
 
 function About() {
   return (
@@ -35,7 +37,7 @@ function About() {
           <div className="lg:w-1/2">
             <div className="relative">
               <img
-                src="\src\assets\ab.webp"
+                src={ab}
                 alt="VELSCENT Perfume Making"
                 className="w-full h-auto rounded-lg shadow-2xl object-cover"
               />

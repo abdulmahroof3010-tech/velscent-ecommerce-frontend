@@ -19,7 +19,7 @@ function WishListProvider({ children }) {
       const data=res.data.WishlistData;
 
       if(data?.items){
-        const formattedData=data.items.map((item)=>({...item.product}))
+        const formattedData=data.items.map((item)=>(item.product))
         
         setWishList(formattedData);
         setCountWishlist(formattedData.length);

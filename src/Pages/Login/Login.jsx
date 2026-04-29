@@ -33,10 +33,10 @@ function Login() {
       <NavBar />
 
       <div className="min-h-screen bg-white flex items-center justify-center p-4">
-        {/* ✅ flex-col for mobile, row for desktop */}
+        {/* flex-col for mobile, row for desktop */}
         <div className="flex flex-col md:flex-row max-w-4xl w-full bg-black rounded-xl shadow-sm border border-neutral-800 overflow-hidden">
 
-          {/* ✅ IMAGE (NOW VISIBLE ON MOBILE) */}
+          {/* IMAGE (NOW VISIBLE ON MOBILE) */}
           <div className="w-full md:w-1/2 h-52 sm:h-64 md:h-auto bg-neutral-900">
             <img
               src="/Images/login-img.jpg"

@@ -11,6 +11,7 @@ function Banner() {
             try{
                 const res=await api.get("/banner");
                 setBannerImages(res.data);
+                
             }catch(e){
                 console.error(e)
             }
@@ -18,8 +19,9 @@ function Banner() {
         fetchBanners()
     },[]);
 
+    console.log(bannerImages)
     useEffect(() => {
-        if(bannerImages.length ===0) return ;
+        if(bannerImages.length === 0) return ;
         const interval = setInterval(() => {
             setCurrentSlide(prev => (prev + 1) % bannerImages.length);
         }, 2000);
@@ -44,7 +46,7 @@ function Banner() {
                     >
                         <div className="w-full h-full p-[5px] sm:p-[6px] md:p-[7px] lg:p-[8px]">
     <img
-      src={item.image.url}
+      src={item?.image?.url}
       alt={`Banner ${index + 1}`}
       className="w-full h-full object-cover rounded-[10px] sm:rounded-[12px] md:rounded-[14px] lg:rounded-[16px] shadow-[0px_6px_32px_rgba(245,222,179,0.75)]"
     />
