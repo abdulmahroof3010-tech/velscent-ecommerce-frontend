@@ -19,7 +19,7 @@ function Banner() {
         fetchBanners()
     },[]);
 
-    console.log(bannerImages)
+    
     useEffect(() => {
         if(bannerImages.length === 0) return ;
         const interval = setInterval(() => {
