@@ -16,7 +16,9 @@ function AuthProvider({children}) {
             setUser(res.data.UserData);
             setRole(res.data.UserData.role)
         }catch(e){
-             console.log("User fetch failed, maybe refreshing...");
+
+              setUser(null);
+  setRole('user');
         }finally{
             setLoading(false)
         }
@@ -25,6 +27,18 @@ function AuthProvider({children}) {
        fetchUser();
       
     }, [])
+
+    useEffect(() => {
+  const handleBack = () => {
+    window.location.reload();
+  };
+
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      handleBack();
+    }
+  });
+}, []);
 
     // Check if user is admin
     const isAdmin = () => {
@@ -92,7 +106,7 @@ function AuthProvider({children}) {
             role:res.data.role
          }
 
-         console.log(userData)
+        
          setUser(userData)
            
          setRole(userData.role)
