@@ -34,12 +34,12 @@ function About() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           
           {/* Left Side - Image */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 ">
             <div className="relative">
               <img
                 src={ab}
                 alt="VELSCENT Perfume Making"
-                className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                className="w-130 h-auto ml-20 rounded-lg shadow-2xl object-cover"
               />
             </div>
           </div>

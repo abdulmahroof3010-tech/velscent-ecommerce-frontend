@@ -21,7 +21,7 @@ function AuthProvider({children}) {
   setRole('user');
         }finally{
             setLoading(false)
-        }
+        }   
        };
       
        fetchUser();

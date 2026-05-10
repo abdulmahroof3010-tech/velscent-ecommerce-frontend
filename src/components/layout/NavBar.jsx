@@ -85,9 +85,9 @@ function NavBar() {
             )}
 
             {openMenu && user && (
-              <div className="absolute right-0 mt-4 w-56 bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-4">
+              <div className="absolute right-0 mt-4 w-60 bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-4">
                 <div className="pb-3 border-b border-amber-900/30 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-amber-700 to-amber-900 flex items-center justify-center">
+                  <div className="min-w-[30px] min-h-[30px] rounded-full bg-gradient-to-r from-amber-700 to-amber-900 flex items-center justify-center">
                     <i className="fa-solid fa-user text-amber-100 text-sm"></i>
                   </div>
                   <div>
@@ -160,7 +160,7 @@ function NavBar() {
 
           {user && (
             <div className="border-b border-amber-900/30 pb-3 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-amber-700 to-amber-900 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-full bg-gradient-to-r from-amber-700 to-amber-900 flex items-center justify-center">
                 <i className="fa-solid fa-user text-amber-100"></i>
               </div>
               <div>
