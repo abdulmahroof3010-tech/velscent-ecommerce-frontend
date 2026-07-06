@@ -50,7 +50,7 @@ function NavBar() {
 
         <div className="w-1/3 flex items-center justify-end gap-8">
           <Link to="/" className="text-amber-100 hover:text-amber-300">HOME</Link>
-          <Link to="/products" className="text-amber-100 hover:text-amber-300">Products</Link>
+          <Link to="/products" className="text-amber-100 hover:text-amber-300">PRODUCTS</Link>
 
           {/* Wishlist */}
           <Link to="/wishlist" className="relative text-amber-100">
